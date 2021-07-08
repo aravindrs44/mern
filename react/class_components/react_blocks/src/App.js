@@ -11,13 +11,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Navigation />
-      <Main>
-        <Subcontents />
-        <Subcontents />
-        <Subcontents />
+      <div className = "flex">
+        <Navigation />
+        <Main>
+        <div className = "flex">
+          <Subcontents />
+          <Subcontents />
+          <Subcontents />
+        </div>
         <Advertisement />
-      </Main>
+        </Main>
+      </div>
     </div>
   );
 }

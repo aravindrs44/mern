@@ -1,6 +1,6 @@
-.navigation {
+.header {
     width: 950px;
-    height: 10px;
-    background-color: green;
+    height: 75px;
+    background-color: #6aa84f;
     margin-bottom: 20px;
 }

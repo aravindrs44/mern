@@ -1,7 +1,7 @@
-.subcontent {
+.subcontents {
     height: 200px;
     width: 210px;
-    background-color: yellow;
+    background-color: #ffd986;
     margin-right: 15px;
     display: inline;
 }
