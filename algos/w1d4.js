@@ -15,7 +15,7 @@ arr11 = [17, 4, -6, -4, -1, 3, 8, 5];
 function insertionSort(arr)  {
     for (i = 1; i <= arr.length - 1; i++)    {
         let j = i;
-        while (j >= 0 && arr[j] < arr[j - 1])    {
+        while (arr[j] < arr[j - 1])    { //this line only works in javascript because arr[j - 1] becomes undefined undefined < 
             let temp = arr[j];
             arr[j] = arr[j - 1];
             arr[j - 1] = temp;
