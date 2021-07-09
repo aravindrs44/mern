@@ -46,7 +46,7 @@ const Form = (props) => {
         setEmail(e.target.value);
         if (e.target.value.length > 0 && e.target.value.length < 5)  {
             setEmailError("Field must be at least 5 characters");
-        }   else    {
+        }    else    {
             setEmailError("");
         }
     }
@@ -64,6 +64,8 @@ const Form = (props) => {
         setConfirmPassword(e.target.value);
         if (e.target.value.length > 0 && e.target.value.length < 8)  {
             setConfirmPasswordError("Field must be at least 8 characters");
+        }   else if (e.target.value != password)  {
+            setConfirmPasswordError("Fields do not match!")
         }   else    {
             setConfirmPasswordError("");
         }
