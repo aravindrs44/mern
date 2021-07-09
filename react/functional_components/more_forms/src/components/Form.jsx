@@ -17,7 +17,6 @@ const Form = (props) => {
     const createUser = (e) => {
         e.preventDefault();
         const newUser = {firstName, lastName, email, password, confirmPassword};
-        console.log(newUser.firstName, newUser.lastName, newUser.email, newUser.password, newUser.confirmPassword);
         setFirstName("");
         setLastName("");
         setEmail("");
