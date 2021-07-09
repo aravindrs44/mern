@@ -1,9 +1,5 @@
 .App {
   text-align: center;
-  background-color: #dddddd;
-  outline: black 2px;
-  width: 950px;
-  margin: 0px auto;
 }
 
 .App-logo {
@@ -15,10 +11,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.flex {
-  display: flex;
 }
 
 .App-header {
