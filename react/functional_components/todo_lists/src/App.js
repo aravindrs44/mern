@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
+import List from './components/Form';
 
 function App() {
-  const [formState, setFormState] = useState({
+  const [formState, setFormState] = useState([{
     task: "",
-    completed: false
-  });
+    completed: false,
+    show: true
+  }]);
+
   return (
     <div className="App">
+      <List setFormState = {setFormState} formState = {formState}/>
     </div>
   );
 }
