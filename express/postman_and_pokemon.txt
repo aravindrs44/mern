@@ -1,0 +1,5 @@
+https://pokeapi.co/api/v2/pokemon/bulbasaur
+https://pokeapi.co/api/v2/pokemon/4
+https://pokeapi.co/api/v2/ability/100
+https://pokeapi.co/api/v2/pokemon?limit=100&offset=200
+https://pokeapi.co/api/v2/pokemon/mamoswine
