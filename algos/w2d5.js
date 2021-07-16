@@ -86,35 +86,35 @@ function twoSumWithoutDict(num, targetSum) {
 
 
 function twoSumRossStyle(nums, targetSum) {
-    let i=0;
-    let j=1;
-    while(i<nums.length-1){
-        if((nums[i]+nums[j])==targetSum){
-            return [i,j];
-        }
-        if(j<nums.length-1){
-            j++;
-        } else {
-            i++;
-            j=i+1;
-        }
+  let i = 0;
+  let j = 1;
+  while (i < nums.length - 1) {
+    if ((nums[i] + nums[j]) == targetSum) {
+      return [i, j];
     }
-    return false;
+    if (j < nums.length - 1) {
+      j++;
+    } else {
+      i++;
+      j = i + 1;
+    }
+  }
+  return false;
 }
 
 
 function twoSumDictOWO(nums, targetSum) {
-    let dict = {};
-    let results = [];
-    for (let i = 0; i < nums.length; i++){
-      if(dict[targetSum-nums[i]] === undefined){
-        dict[nums[i]]=i
-      }
-      else{
-        results.push ([dict[targetSum-nums[i]], i])
-      }
+  let dict = {};
+  let results = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (dict[targetSum - nums[i]] === undefined) {
+      dict[nums[i]] = i
     }
-    return results
+    else {
+      results.push([dict[targetSum - nums[i]], i])
+    }
+  }
+  return results
 }
 
 
@@ -179,28 +179,28 @@ function kMostFrequent(nums, k) {
 
 
 function kMostFrequent(nums, k) {
-    numObj={};
-    for(let i=0; i<nums.length; i++){
-        if(i in numObj){
-            numObj[i]+=1;
-        } else {
-            numObj[i]=1;
-        }
+  numObj = {};
+  for (let i = 0; i < nums.length; i++) {
+    if (i in numObj) {
+      numObj[i] += 1;
+    } else {
+      numObj[i] = 1;
     }
-    let results=[]
-    let j = 0;
-    while(j<k){
-        let val=null;
-        for(let key in numObj){
-            if(val==null || numObj[key]>numObj[val]){
-                val=key;
-            }
-        }
-        results.push(parseInt(val));
-        numObj[val]=0;
-        j++;
+  }
+  let results = []
+  let j = 0;
+  while (j < k) {
+    let val = null;
+    for (let key in numObj) {
+      if (val == null || numObj[key] > numObj[val]) {
+        val = key;
+      }
     }
-    return results;
+    results.push(parseInt(val));
+    numObj[val] = 0;
+    j++;
+  }
+  return results;
 }
 
 
