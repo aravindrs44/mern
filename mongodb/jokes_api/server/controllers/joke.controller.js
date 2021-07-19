@@ -6,11 +6,13 @@ module.exports.findAllJokes = (req, res) => {
         .catch(err => res.json({err}))
 }
 
-module.exports.findRandomJoke = (req, res) => {
-    Joke.aggregate([{$sample : {size : 1}}])
-        .then(randJoke => res.json({randJoke}))
-        .catch(err => res.json({err}))
-}
+// module.exports.findRandomJoke = (req, res) => {
+//     // Joke.aggregate([{$sample : {size : 1}}])
+//     //     .then(randJoke => res.json({randJoke}))
+//     //     .catch(err => res.json({err}))
+
+//     Joke.countDocuments().exec()
+// }
 
 module.exports.findOneJoke = (req, res) => {
     Joke.find({_id: req.params._id})
