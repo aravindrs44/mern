@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import List from './List';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const Form = () =>   {
@@ -17,6 +18,7 @@ const [product, setProduct] = useState({
     }
 
     const handleSubmit = e =>   {
+        console.log(product)
         axios.post('http://localhost:8000/api/products/new', product)
         .then(res => console.log(res))
         .catch(err => console.log(err))
@@ -37,6 +39,7 @@ const [product, setProduct] = useState({
                 </div>
                 <button>Create</button>
             </form>
+            <List />
         </div>
     )
 }
