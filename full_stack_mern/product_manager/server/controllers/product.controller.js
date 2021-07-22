@@ -18,3 +18,17 @@ module.exports.createProduct = (req, res) => {
         .then(newProduct => res.json({newProduct}))
         .catch(err => res.status(400).json({err}))
 }
+
+module.exports.editProduct = (req, res) => {
+    const id = req.params;
+    Product.findOneAndUpdate({_id: id})
+        .then(editedProduct => res.json({editedProduct}))
+        .catch(err => res.status(400).json({err}))
+}
+
+module.exports.deleteProduct = (req, res) => {
+    const id = req.params;
+    Product.findByIdAndDelete({_id: id})
+        .then(deletedProduct => res.json({deletedProduct}))
+        .catch(err => res.status(400).json({err}))
+}

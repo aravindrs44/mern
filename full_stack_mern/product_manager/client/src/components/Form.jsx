@@ -18,10 +18,11 @@ const [product, setProduct] = useState({
     }
 
     const handleSubmit = e =>   {
+        e.preventDefault();
         console.log(product)
         axios.post('http://localhost:8000/api/products/new', product)
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
     }
 
     return(

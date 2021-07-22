@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from '@reach/router';
 
 const Detail = ({_id}) =>    {
     const [product, setProduct] = useState();
@@ -12,9 +13,16 @@ const Detail = ({_id}) =>    {
 
     return(
         <div>
-            <h2>{product.title}</h2>
-            <p>{product.price}</p>
-            <p>{product.description}</p>
+        {
+            product ?
+                <div>
+                    <h2>{product.title}</h2>
+                    <p>{product.price}</p>
+                    <p>{product.description}</p>
+                    <Link to = {`/products/${_id}/edit`}>Edit</Link>
+                </div>
+                :  <p>Waiting for data!</p>
+        }
         </div>
     )
 }
